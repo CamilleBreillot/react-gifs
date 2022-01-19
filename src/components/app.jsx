@@ -1,5 +1,6 @@
 import React,  { Component } from 'react';
 import Search from './search_bar.jsx';
+import Gif from './gif.jsx';
 
 class App extends Component {
   render () {
@@ -7,6 +8,9 @@ class App extends Component {
       <div>
         <div className="left-scene">
           <Search />
+        <div className="selected-gif">
+          <Gif />
+        </div>
         </div>
         <div className="right-scene">
         </div>
