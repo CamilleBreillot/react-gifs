@@ -1,8 +1,10 @@
+/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
-import Gif from './gif.jsx';
+import Gif from './gif';
 
 class GifList extends Component {
   renderList = () => {
+    // eslint-disable-next-line max-len
     return this.props.gifs.map(gif => <Gif id={gif.id} key={gif.id} setSelected={this.props.setSelected} />);
   }
 

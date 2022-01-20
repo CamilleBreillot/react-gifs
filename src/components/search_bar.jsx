@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 
 class Search extends Component {
@@ -7,8 +8,12 @@ class Search extends Component {
 
   render() {
     return (
-      <input className='form-search form-control' type='text' placeholder='What gifs are you looking for?'
-      onChange={this.handleUpdate}></input>
+      <input
+        className="form-search form-control"
+        type="text"
+        placeholder="What gifs are you looking for?"
+        onChange={this.handleUpdate}
+      />
     );
   }
 }
