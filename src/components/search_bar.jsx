@@ -7,7 +7,7 @@ class Search extends Component {
 
   render() {
     return (
-      <input className='form-search form-control' type='text'
+      <input className='form-search form-control' type='text' placeholder='What gifs are you looking for?'
       onChange={this.handleUpdate}></input>
     );
   }
