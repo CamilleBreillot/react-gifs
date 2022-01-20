@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Search extends Component {
   handleUpdate = (event) => {
-    return event.target.value;
+    this.props.search(event.target.value);
   }
 
   render() {
