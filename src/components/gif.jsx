@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 
 class Gif extends Component {
+  handleClick = () => {
+    this.props.setSelected(this.props.id);
+  }
+
   render() {
     const src = `https://media.giphy.com/media/${this.props.id}/giphy.gif`;
     return (
-        <img src={src} className="gif" alt=""/>
+        <img src={src} className="gif" alt=""
+        onClick={this.handleClick}/>
     );
   }
 }
