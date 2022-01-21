@@ -15,14 +15,24 @@ class App extends Component {
     };
   }
 
+  // search = (query) => {
+  //   giphy('FjxyPCmkRrA2Z00TSWkWN6nJOvY3dO5j').search({
+  //     q: query,
+  //     rating: 'g',
+  //     limit: 10
+  //   }, (error, result) => {
+  //     this.setState({
+  //       gifs: result.data
+  //     });
+  //   });
+  // }
+
   search = (query) => {
-    giphy('FjxyPCmkRrA2Z00TSWkWN6nJOvY3dO5j').search({
-      q: query,
-      rating: 'g',
-      limit: 10
-    }, (error, result) => {
+    const giphEndpoint = `https://api.giphy.com/v1/gifs/search?api_key=FjxyPCmkRrA2Z00TSWkWN6nJOvY3dO5j&q=${query}&limit=10`
+    fetch(giphEndpoint).then(response => response.json()).then((data) => {
+      // const gifs = data.data.map(giph => giph.id);
       this.setState({
-        gifs: result.data
+        gifs: data.data
       });
     });
   }
